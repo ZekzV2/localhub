@@ -1,0 +1,30 @@
+local script loader = loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/b5331169d8ba0b502c8ce52e4fc3356d.lua"))()
+
+local Features = {
+    "Disable 3D Rendering",
+    "Auto Break Nearest Coin",
+    "Auto Break In Selected Zone",
+    "Auto Open Eggs",
+    "Remove Egg Opening Animation",
+    "Auto Eat Fruits",
+    "Auto Buy Venders",
+    "Auto Collect Orbs",
+    "Auto Find Hidden Presents",
+    "Auto Grab All Shiny Relics",
+    "Auto Selected Obby",
+    "Auto Open Gifts, toggle, Button",
+    "Auto Digsites",
+    "Dig Aura",
+    "Auto Fishing"
+}
+for i,v in next, Features do
+    warn(i,v)
+end
+local Success, Result = pcall(request, {Url = "https://raw.githubusercontent.com/1201for/V.G-Hub/main/Electron-Testing/Pet_sim_99",Method = "GET"})
+if Success and game.GameId == 3317771874 then
+    loadstring(Result.Body)({"Main Script Loaded Congrats"})
+else
+    error("Main script failed to load pls try again never")
+end
+
+-- Everything except some of the main features is open sourced :)
